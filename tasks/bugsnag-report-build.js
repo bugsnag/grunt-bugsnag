@@ -1,5 +1,4 @@
 const reportBuild = require('bugsnag-build-reporter')
-const pkg = require('../package.json')
 
 module.exports = grunt => {
   const gruntLogger = {
@@ -26,7 +25,7 @@ module.exports = grunt => {
 
     // merge config with buildTool name
     const build = Object.assign({
-      buildTool: `${pkg.name}@${pkg.version}`
+      buildTool: 'grunt-bugsnag'
     }, grunt.config.get('bugsnagReportBuild'))
 
     // merge options with grunt-specific logging

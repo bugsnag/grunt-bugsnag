@@ -1,8 +1,7 @@
 {
   "name": "grunt-bugsnag",
   "version": "0.0.0",
-  "description": "Bugsnag integration for Grunt",
-  "main": "index.js",
+  "description": "Grunt tasks for common Bugsnag actions",
   "scripts": {
     "test": "standard && tape test/**.test.js"
   },

@@ -1,7 +1,6 @@
 const test = require('tape')
 const exec = require('child_process').exec
 const http = require('http')
-const pkg = require('../package.json')
 
 test('grunt-bugsnag: bugsnagReportBuild', t => {
   const server = http.createServer((req, res) => {
@@ -19,7 +18,7 @@ test('grunt-bugsnag: bugsnagReportBuild', t => {
       t.ok(j, 'json body was received')
       t.equal(j.appVersion, '1.2.3', 'body should contain app version')
       t.equal(j.apiKey, 'YOUR_API_KEY', 'body should contain api key')
-      t.equal(j.buildTool, `grunt-bugsnag@${pkg.version}`, 'buildTool should be set')
+      t.equal(j.buildTool, 'grunt-bugsnag', 'buildTool should be set')
     })
   })
   server.listen()
