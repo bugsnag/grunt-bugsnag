@@ -1,0 +1,20 @@
+{
+  "name": "grunt-bugsnag",
+  "version": "0.0.0",
+  "description": "Bugsnag integration for Grunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && tape test/**.test.js"
+  },
+  "author": "Bugsnag Inc.",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "standard": "^10.0.3",
+    "tape": "^4.8.0"
+  },
+  "dependencies": {
+    "bugsnag-build-reporter": "^1.0.0-3"
+  }
+}
