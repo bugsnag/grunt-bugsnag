@@ -2,8 +2,17 @@
   "name": "grunt-bugsnag",
   "version": "0.0.0",
   "description": "Grunt tasks for common Bugsnag actions",
+  "keywords": [
+    "bugsnag",
+    "grunt",
+    "gruntplugin"
+  ],
   "scripts": {
     "test": "standard && tape test/**.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bugsnag/grunt-bugsnag"
   },
   "author": "Bugsnag Inc.",
   "license": "MIT",
