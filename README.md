@@ -9,7 +9,7 @@ Grunt tasks for common Bugsnag actions.
 
 Reports your application's build to Bugsnag. It can auto detect source control from `.git`, `.hg` and `package.json`.
 
-### Config
+#### Config
 
 - `apiKey: string` your Bugsnag API key __[required]__
 - `appVersion: string` the version of the application you are building __[required]__
