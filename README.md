@@ -5,15 +5,23 @@
 
 Grunt tasks for common Bugsnag actions.
 
-## `bugsnagReportBuild`
+## Installation
+
+```
+npm install --save-dev grunt-bugsnag
+```
+
+## Tasks
+
+### `bugsnagReportBuild`
 
 Reports your application's build to Bugsnag. It can auto detect source control from `.git`, `.hg` and `package.json`.
 
-#### Config
+##### Config
 
 - `apiKey: string` your Bugsnag API key __[required]__
 - `appVersion: string` the version of the application you are building __[required]__
-- `releaseStage: string` the releaseStage stage (leave blank if this build can be released to different `releaseStage`s)
+- `releaseStage: string` `'production'`, `'staging'` etc. (leave blank if this build can be released to different `releaseStage`s)
 - `sourceControl: object` an object describing the source control of the build (if not specified, the module will attempt to detect source control information from `.git`, `.hg` and the nearest `package.json`)
   - `provider: string` can be one of: `'github'`, `'github-enterprise'`, `'gitlab'`, `'gitlab-onpremise'`, `'bitbucket'`, `'bitbucket-server'`
   - `repository: string` a URL (`git`/`ssh`/`https`) pointing to the repository, or webpage representing the repository
@@ -21,12 +29,12 @@ Reports your application's build to Bugsnag. It can auto detect source control f
 - `builderName: string` the name of the person/machine that created this build (defaults to the result of the `whoami` command)
 - `autoAssignRelease: boolean` automatically associate this build with any new error events and sessions that are received for the `releaseStage` until a subsequent build notification is received. If this is set to `true` and no `releaseStage` is provided the build will be applied to `'production'`.
 
-#### Options
+##### Options
 
 - `path: string` the path to search for source control info, defaults to `process.cwd()`
 - `endpoint: string` post the build payload to a URL other than the default (`https://build.bugsnag.com`)
 
-### Usage
+#### Usage
 
 ```js
 /* Gruntfile.js */
