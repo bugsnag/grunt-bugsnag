@@ -23,6 +23,6 @@
     "tape": "^4.8.0"
   },
   "dependencies": {
-    "bugsnag-build-reporter": "^1.0.0-3"
+    "bugsnag-build-reporter": "^1.0.0"
   }
 }
