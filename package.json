@@ -1,6 +1,6 @@
 {
   "name": "grunt-bugsnag",
-  "version": "1.0.0-0",
+  "version": "1.0.0",
   "description": "Grunt tasks for common Bugsnag actions",
   "keywords": [
     "bugsnag",
